@@ -1,28 +1,29 @@
 # vagrant-experiments
 
 
-vagrant init bento/ubuntu-20.04
+`vagrant init bento/ubuntu-20.04`
 
-vagrant up 
+`vagrant up`
 
 ИЛИ если долго качать через впн, то перейти по ссылке на бокс, скачать через браузер
 
-vagrant box add --name bento/ubuntu-20.04 C:\Users\Ekaterina\Downloads\ae255a22-7794-44f1-a922-36aaa87c7bc7
-vagrant up
+`vagrant box add --name bento/ubuntu-20.04 C:\Users\Ekaterina\Downloads\ae255a22-7794-44f1-a922-36aaa87c7bc7`
+`vagrant up`
 
 Может возникнуть ошибка 
-Timed out while waiting for the machine to boot
+`Timed out while waiting for the machine to boot`
 
 Тогда в Vagrantfile расскоментить/добавить
 
+```
 config.vm.provider "virtualbox" do |vb|
   vb.gui = true
   vb.cpus = 1
 end
+```
 
-
-vagrant destroy
-vagrant up
+`vagrant destroy`
+`vagrant up`
 
 
 
