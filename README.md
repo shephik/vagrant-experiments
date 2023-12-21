@@ -30,9 +30,9 @@ end
 
 
 -------------------- работа в ВМ -------------------
-`vagrant ssh`\
+`vagrant ssh` \
 
-'cd /vagrant'\
+'cd \/vagrant' \
 
 устанавливаем Postgres, Nodejs для Ubuntu ( проверяем `node -v` и `sudo -u postgres psql`)
 
@@ -51,7 +51,7 @@ end
 **2 вариант**\
 `sudo -u postgres createuser --createdb vagrant`\
 `sudo -u postgres createdb vagrant`\
-`sudo -u postgres psql -c "ALTER USER vagrant WITH PASSWORD 'vagrant';"`\
+`sudo -u postgres psql -c "ALTER USER vagrant WITH PASSWORD 'vagrant';"`
 
 
 `psql` => работа под юзером vagrant 
@@ -59,7 +59,7 @@ end
 
 
 
-------------------- разворачивание проекта в vagrant ---------------------
+------------------- разворачивание проекта в vagrant --------------------- \
 `clone https://github.com/${proj_name}.git`
 
 `cd /vagrant/${proj_name}`
@@ -69,4 +69,4 @@ end
 
 
 
-** Всю настройку внутри vagrant ssh можно заменить командой `vagrant provision` при наличии файла `script.sh` **
+**Всю настройку внутри vagrant ssh можно заменить командой `vagrant provision` при наличии файла `script.sh`**
