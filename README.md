@@ -1,6 +1,8 @@
 # vagrant-experiments
 
 
+-------------------- запуск Vagrant -------------------
+
 `vagrant init bento/ubuntu-20.04`
 
 `vagrant up`
@@ -36,17 +38,17 @@ end
 
 Создаем пользователя vagrant с паролем и БД
 
-1 вариант
+**1 вариант**\
 `sudo -u postgres psql`
 
-`CREATE ROLE vagrant WITH LOGIN PASSWORD '1111';`
+`CREATE ROLE vagrant WITH LOGIN PASSWORD 'vagrant';`
 
 Заходим под дефолтным юзером
 `sudo -i -u postgres`\
 `createdb vagrant`\
 `exit`
 
-2 вариант
+**2 вариант**\
 `sudo -u postgres createuser --createdb vagrant`\
 `sudo -u postgres createdb vagrant`\
 `sudo -u postgres psql -c "ALTER USER vagrant WITH PASSWORD 'vagrant';"`\
@@ -63,3 +65,8 @@ end
 `cd /vagrant/${proj_name}`
 
 выполнить команды проекта
+
+
+
+
+** Всю настройку внутри vagrant ssh можно заменить командой `vagrant provision` при наличии файла `script.sh` **
